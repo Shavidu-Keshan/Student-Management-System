@@ -9,6 +9,18 @@ class student:
         self.root.title("student management system")
         self.root.resizable(False,False)
         
+      
+         # Open and resize the image
+        image = Image.open("school.jpg")
+        resized_image = image.resize((1000, 500))  # Resize to fit the window size
+
+        # Convert the resized image to PhotoImage
+        self.photo_image = ImageTk.PhotoImage(resized_image)
+
+        # Display the image in a label
+        self.lbl_photo_image = Label(self.root, image=self.photo_image, bd=0)
+        self.lbl_photo_image.place(x=0, y=0)
+        
         
         
 if __name__=="__main__":
