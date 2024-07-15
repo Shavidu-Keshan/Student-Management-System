@@ -25,9 +25,9 @@ class student:
                       bg='lightgreen', fg='black', anchor='w', padx=20)
         title.place( y=30, relwidth=1, height=50)
         
-        #title = Label(self.root, text="Student Name", font=('calibri', 30, 'bold'),
-         #             bg='lightgreen', fg='black', anchor='w', padx=20)
-        #title.place( y=30, relwidth=1, height=50)
+        lbl_name = Label(self.root, text="Student Name", font=('calibri', 20, 'bold'),
+                      bg='lightgreen', fg='black')
+        lbl_name.place(x=10, y=120, height=30,width=300)
         
         
         
