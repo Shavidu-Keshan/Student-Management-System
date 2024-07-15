@@ -21,6 +21,14 @@ class student:
         self.lbl_photo_image = Label(self.root, image=self.photo_image, bd=0)
         self.lbl_photo_image.place(x=0, y=0)
         
+        title = Label(self.root, text="Student Management System", font=('calibri', 30, 'bold'),
+                      bg='lightgreen', fg='black', anchor='w', padx=20)
+        title.place( y=30, relwidth=1, height=50)
+        
+        #title = Label(self.root, text="Student Name", font=('calibri', 30, 'bold'),
+         #             bg='lightgreen', fg='black', anchor='w', padx=20)
+        #title.place( y=30, relwidth=1, height=50)
+        
         
         
 if __name__=="__main__":
