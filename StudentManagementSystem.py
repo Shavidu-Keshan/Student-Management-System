@@ -57,12 +57,12 @@ class student:
         
         # variables #
         
-        #self.var_index=StringVar()
+        self.var_index=StringVar()
         
-        #entry_index=Entry(self.root,font=('calibri', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
-        #entry_index.place(x=220, y=120, height=30,width=200)
+        entry_index=Entry(self.root,font=('calibri', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
+        entry_index.place(x=220, y=120, height=30,width=200)
         
-        #entry_index.focus()
+        entry_index.focus()
         
         
 if __name__=="__main__":
