@@ -66,30 +66,33 @@ class student:
         
         # Text Entry #
         
-        entry_index=Entry(self.root,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
+        entry_index=Entry(self.root,textvariable=self.var_index,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
         entry_index.place(x=220, y=120, height=30,width=200)
         entry_index.focus()
         
-        entry_name=Entry(self.root,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
+        entry_name=Entry(self.root,textvariable=self.var_index,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
         entry_name.place(x=220, y=160, height=30,width=400)
         
-        entry_adress=Entry(self.root,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
+        entry_adress=Entry(self.root,textvariable=self.var_adrees,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
         entry_adress.place(x=220, y=200, height=30,width=400)
         
-        entry_contact=Entry(self.root,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
+        entry_contact=Entry(self.root,textvariable=self.var_contact,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
         entry_contact.place(x=220, y=240, height=30,width=150)
         
-        entry_email=Entry(self.root,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
+        entry_email=Entry(self.root,textvariable=self.var_email,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
         entry_email.place(x=220, y=280, height=30,width=400)
         
-        entry_class=Entry(self.root,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
+        entry_class=Entry(self.root,textvariable=self.var_class,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
         entry_class.place(x=220, y=320, height=30,width=130)
         
         #buttons #
-        btn_save=Button(self.root,text="Save" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=10, y=375, height=30,width=100)
+        btn_save=Button(self.root,text="Save" ,command=self.save(),font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=10, y=375, height=30,width=100)
         btn_update=Button(self.root,text="Update" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=130, y=375, height=30,width=100)
         btn_delete=Button(self.root,text="Delete" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=250, y=375, height=30,width=100)
         btn_create=Button(self.root,text="Clear" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=370, y=375, height=30,width=100)
+        
+    def save(self):
+        pass
         
 if __name__=="__main__":
     root=Tk()
