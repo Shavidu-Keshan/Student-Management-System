@@ -83,8 +83,10 @@ class student:
         entry_email.place(x=220, y=280, height=30,width=400)
         
         entry_class=Entry(self.root,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
-        entry_class.place(x=220, y=320, height=30,width=100)
+        entry_class.place(x=220, y=320, height=30,width=130)
         
+        #buttons #
+        btn_save=Button(self.root,text="Save" ,font=('times', 20, ),bg='lightblue', fg='black').place(x=10, y=400, height=25,width=120)
         
 if __name__=="__main__":
     root=Tk()
