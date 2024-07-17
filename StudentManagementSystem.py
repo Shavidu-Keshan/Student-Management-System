@@ -86,10 +86,10 @@ class student:
         entry_class.place(x=220, y=320, height=30,width=130)
         
         #buttons #
-        btn_save=Button(self.root,text="Save" ,font=('times', 20,'bold'),bg='lightblue', fg='black').place(x=10, y=372, height=30,width=100)
-        btn_update=Button(self.root,text="Update" ,font=('times', 20,'bold'),bg='lightblue', fg='black').place(x=130, y=372, height=30,width=100)
-        btn_delete=Button(self.root,text="Delete" ,font=('times', 20,'bold'),bg='lightblue', fg='black').place(x=250, y=372, height=30,width=100)
-        btn_create=Button(self.root,text="Clear" ,font=('times', 20,'bold'),bg='lightblue', fg='black').place(x=370, y=372, height=30,width=100)
+        btn_save=Button(self.root,text="Save" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=10, y=375, height=30,width=100)
+        btn_update=Button(self.root,text="Update" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=130, y=375, height=30,width=100)
+        btn_delete=Button(self.root,text="Delete" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=250, y=375, height=30,width=100)
+        btn_create=Button(self.root,text="Clear" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=370, y=375, height=30,width=100)
         
 if __name__=="__main__":
     root=Tk()
