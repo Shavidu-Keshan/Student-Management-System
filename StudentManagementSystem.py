@@ -94,7 +94,20 @@ class student:
         
     def save(self):
         sqlcon=pymysql.connect(host="localhost",user="root",password="KE1120shan#",database="student")
-        
+        cur=sqlcon.cursor()
+        try:
+            if self.var_index.get()=="":
+                messagebox.showerror("Error","All field required....!")
+            else:
+                cur.execute("insert into student (index,name,adress,contact,email,class) values(%s,%s,%s,%s,%s,%s)",
+                            (
+                                self.var_index.get(),
+                                self.var_name.get(),
+                                self.var_address.get(),
+                                self.var_contact.get(),
+                                self.var_email.get(),
+                                self.var_class.get(),
+                            ))
         
 if __name__=="__main__":
     root=Tk()
