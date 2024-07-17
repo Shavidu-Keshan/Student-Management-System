@@ -58,6 +58,13 @@ class student:
         # variables #
         
         self.var_index=StringVar()
+        self.var_name=StringVar()
+        self.var_adrees=StringVar()
+        self.var_contact=StringVar()
+        self.var_email=StringVar()
+        self.var_class=StringVar()
+        
+        # Text Entry #
         
         entry_index=Entry(self.root,font=('calibri', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
         entry_index.place(x=220, y=120, height=30,width=200)
