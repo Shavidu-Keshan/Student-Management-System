@@ -1,6 +1,7 @@
 from tkinter import*
 from tkinter import messagebox
 from PIL import ImageTk,Image
+import pymysql
 
 class student:
     def __init__ (self,root):
@@ -92,7 +93,8 @@ class student:
         btn_create=Button(self.root,text="Clear" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=370, y=375, height=30,width=100)
         
     def save(self):
-        pass
+        sqlcon=pymysql.connect(host="localhost",user="root",password="KE1120shan#",database="student")
+        
         
 if __name__=="__main__":
     root=Tk()
