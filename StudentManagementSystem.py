@@ -108,6 +108,11 @@ class student:
                                 self.var_email.get(),
                                 self.var_class.get(),
                             ))
+                sqlcon.commit()
+                messagebox.showinfo("Success","Record inserted sucsessfully")
+                sqlcon.close()
+        except Exception as ex:
+            messagebox.showerror("Error",f"Error due to : {str(ex)}")
         
 if __name__=="__main__":
     root=Tk()
