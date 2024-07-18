@@ -35,9 +35,9 @@ class student:
         lbl_name.place(x=10, y=160, height=30,width=200)
         
         
-        lbl_adress = Label(self.root, text="Adress", font=('times', 20, 'bold'),
+        lbl_address = Label(self.root, text="Adress", font=('times', 20, 'bold'),
                       bg='lightgreen', fg='black',anchor='w')
-        lbl_adress.place(x=10, y=200, height=30,width=200)
+        lbl_address.place(x=10, y=200, height=30,width=200)
         
         lbl_contact = Label(self.root, text="Contact", font=('times', 20, 'bold'),
                       bg='lightgreen', fg='black',anchor='w')
@@ -48,7 +48,7 @@ class student:
                       bg='lightgreen', fg='black',anchor='w')
         lbl_email.place(x=10, y=280, height=30,width=200)
         
-        lbl_class = Label(self.root, text="Class", font=('timesi', 20, 'bold'),
+        lbl_class = Label(self.root, text="Class", font=('times', 20, 'bold'),
                       bg='lightgreen', fg='black',anchor='w')
         lbl_class.place(x=10, y=320, height=30,width=200)
         
@@ -60,7 +60,7 @@ class student:
         
         self.var_index=StringVar()
         self.var_name=StringVar()
-        self.var_adrees=StringVar()
+        self.var_address=StringVar()
         self.var_contact=StringVar()
         self.var_email=StringVar()
         self.var_class=StringVar()
@@ -71,11 +71,11 @@ class student:
         entry_index.place(x=220, y=120, height=30,width=200)
         entry_index.focus()
         
-        entry_name=Entry(self.root,textvariable=self.var_index,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
+        entry_name=Entry(self.root,textvariable=self.var_name,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
         entry_name.place(x=220, y=160, height=30,width=400)
         
-        entry_adress=Entry(self.root,textvariable=self.var_adrees,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
-        entry_adress.place(x=220, y=200, height=30,width=400)
+        entry_address=Entry(self.root,textvariable=self.var_address,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
+        entry_address.place(x=220, y=200, height=30,width=400)
         
         entry_contact=Entry(self.root,textvariable=self.var_contact,font=('times', 20, ),bg='lightgreen', fg='black',justify=RIGHT)
         entry_contact.place(x=220, y=240, height=30,width=150)
@@ -87,7 +87,7 @@ class student:
         entry_class.place(x=220, y=320, height=30,width=130)
         
         #buttons #
-        btn_save=Button(self.root,text="Save" ,command=self.save(),font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=10, y=375, height=30,width=100)
+        btn_save=Button(self.root,text="Save" ,command=self.save,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=10, y=375, height=30,width=100)
         btn_update=Button(self.root,text="Update" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=130, y=375, height=30,width=100)
         btn_delete=Button(self.root,text="Delete" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=250, y=375, height=30,width=100)
         btn_create=Button(self.root,text="Clear" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=370, y=375, height=30,width=100)
@@ -99,7 +99,7 @@ class student:
             if self.var_index.get()=="":
                 messagebox.showerror("Error","All field required....!")
             else:
-                cur.execute("insert into student (index,name,adress,contact,email,class) values(%s,%s,%s,%s,%s,%s)",
+                cur.execute("insert into student (indexno,name,adress,contact,email,class) values(%s,%s,%s,%s,%s,%s)",
                             (
                                 self.var_index.get(),
                                 self.var_name.get(),
