@@ -6,14 +6,14 @@ import pymysql
 class student:
     def __init__ (self,root):
         self.root=root
-        self.root.geometry("1000x500+200+100")
+        self.root.geometry("1000x575+200+75")
         self.root.title("student management system")
         self.root.resizable(False,False)
         
       
          # Open and resize the image
         image = Image.open("school.jpg")
-        resized_image = image.resize((1000, 500))  # Resize to fit the window size
+        resized_image = image.resize((1000, 575))  # Resize to fit the window size
 
         # Convert the resized image to PhotoImage
         self.photo_image = ImageTk.PhotoImage(resized_image)
@@ -91,6 +91,11 @@ class student:
         btn_update=Button(self.root,text="Update" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=130, y=375, height=30,width=100)
         btn_delete=Button(self.root,text="Delete" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=250, y=375, height=30,width=100)
         btn_create=Button(self.root,text="Clear" ,font=('times', 20,'bold'),bg='lightblue', fg='black',activebackground="#6eb3e6",cursor='hand2').place(x=370, y=375, height=30,width=100)
+        
+        # Treeview #
+        
+        Treeview_frame=Frame(self.root,bd=2,relief=RIDGE)
+        Treeview_frame.place(x=10,y=420,width=985,height=135)
         
     def save(self):
         sqlcon=pymysql.connect(host="localhost",user="root",password="KE1120shan#",database="student")
