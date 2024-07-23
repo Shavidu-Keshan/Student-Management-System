@@ -6,14 +6,14 @@ import pymysql
 class student:
     def __init__ (self,root):
         self.root=root
-        self.root.geometry("1000x500+200+100")
+        self.root.geometry("1000x575+200+75")
         self.root.title("student management system")
         self.root.resizable(False,False)
         
       
          # Open and resize the image
         image = Image.open("school.jpg")
-        resized_image = image.resize((1000, 500))  # Resize to fit the window size
+        resized_image = image.resize((1000, 575))  # Resize to fit the window size
 
         # Convert the resized image to PhotoImage
         self.photo_image = ImageTk.PhotoImage(resized_image)
