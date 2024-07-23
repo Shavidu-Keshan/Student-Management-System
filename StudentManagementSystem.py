@@ -95,7 +95,7 @@ class student:
         # Treeview #
         
         Treeview_frame=Frame(self.root,bd=2,relief=RIDGE)
-        Treeview_frame.place(x=10,y=420,width=982,height=135)
+        Treeview_frame.place(x=10,y=420,width=984,height=135)
         
     def save(self):
         sqlcon=pymysql.connect(host="localhost",user="root",password="KE1120shan#",database="student")
