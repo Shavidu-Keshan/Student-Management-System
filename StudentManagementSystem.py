@@ -2,7 +2,7 @@ from tkinter import*
 from tkinter import messagebox
 from PIL import ImageTk,Image
 import pymysql
-
+from tkinter import ttk,messagebox
 class student:
     def __init__ (self,root):
         self.root=root
@@ -96,6 +96,21 @@ class student:
         
         Treeview_frame=Frame(self.root,bd=2,relief=RIDGE)
         Treeview_frame.place(x=10,y=420,width=984,height=135)
+        
+        scrolly=Scrollbar(Treeview_frame,orient=VERTICAL)
+        scrollx=Scrollbar(Treeview_frame,orient=HORIZONTAL)
+        
+        self.treeviewtable=ttk.Treeview(Treeview_frame,columns=("indexno","name","address","contact","email","class"),yscrollcommand=scrolly.set,xscrollcommand=scrollx.set)
+        
+        scrollx.config(command=self.treeviewtable.xview)
+        scrolly.config(command=self.treeviewtable.yview)
+        
+        self.treeviewtable.heading("indexno",text="Index No")
+        self.treeviewtable.heading("name",text="Student name")
+        self.treeviewtable.heading("address",text="Adress")
+        self.treeviewtable.heading("contact",text="Contact")
+        self.treeviewtable.heading("email",text="Email")
+        self.treeviewtable.heading("class",text="Class")
         
     def save(self):
         sqlcon=pymysql.connect(host="localhost",user="root",password="KE1120shan#",database="student")
