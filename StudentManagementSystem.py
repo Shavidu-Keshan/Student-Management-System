@@ -112,7 +112,7 @@ class student:
         self.treeviewtable.heading("email",text="Email")
         self.treeviewtable.heading("class",text="Class")
         
-        self.treeviewtable["sshow"]="headings"
+        self.treeviewtable["show"]="headings"
         self.treeviewtable.column("indexno",width=70)
         self.treeviewtable.column("name",width=150)
         self.treeviewtable.column("address",width=150)
@@ -121,6 +121,9 @@ class student:
         self.treeviewtable.column("class",width=70)
         
         self.treeviewtable.pack(fill=BOTH,expand=1)
+        scrolly.config(command=self.treeviewtable.yview)
+        #self.treeviewtable.bind("<ButtonRelease-1>",self.getdata)
+        #self.displaydata()
         
     def save(self):
         sqlcon=pymysql.connect(host="localhost",user="root",password="KE1120shan#",database="student")
