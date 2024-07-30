@@ -121,6 +121,8 @@ class Student:
         self.treeviewtable.pack(fill=BOTH, expand=1)
         scrolly.config(command=self.treeviewtable.yview)
 
+        self.treeviewtable.bind("<ButtonRelease-1>", self.getdata)
+
         self.displaydata()
 
     def displaydata(self):
@@ -132,7 +134,21 @@ class Student:
         self.treeviewtable.delete(*self.treeviewtable.get_children())
         for row in result:
             self.treeviewtable.insert("", END, values=row)
-        sqlcon.close()
+    
+    def getdata(self, ev):
+        viewinfo = self.treeviewtable.focus()
+        learnerdata = self.treeviewtable.item(viewinfo)
+        row = learnerdata.get('values', None)
+        
+        if row:
+            self.var_index.set(row[0])
+            self.var_name.set(row[1])
+            self.var_address.set(row[2])
+            self.var_contact.set(row[3])
+            self.var_email.set(row[4])
+            self.var_class.set(row[5])
+        else:
+            messagebox.showwarning("Warning", "No data selected")
 
     def clear(self):
         self.var_index.set("")
