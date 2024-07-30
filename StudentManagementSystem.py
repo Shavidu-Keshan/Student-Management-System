@@ -93,7 +93,7 @@ class Student:
 
         # Treeview
         treeview_frame = Frame(self.root, bd=2, relief=RIDGE)
-        treeview_frame.place(x=10, y=420, width=984, height=135)
+        treeview_frame.place(x=10, y=420, width=700, height=135)
 
         scrolly = Scrollbar(treeview_frame, orient=VERTICAL)
         scrollx = Scrollbar(treeview_frame, orient=HORIZONTAL)
